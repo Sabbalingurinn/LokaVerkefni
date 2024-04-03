@@ -1,9 +1,9 @@
-package is.hi.lokaverkefni;
+package is.hi.lokaverkefni.vidmot;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-public class HelloController {
+public class RoulletteController {
     @FXML
     private Label welcomeText;
 
