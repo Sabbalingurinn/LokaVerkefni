@@ -9,6 +9,6 @@ public class HelloController {
 
     @FXML
     protected void onHelloButtonClick() {
-        welcomeText.setText("Lokaverkefni sem verður geggjað");
+        welcomeText.setText("Lokaverkefni sem verður geggjað kv Sigga");
     }
 }
