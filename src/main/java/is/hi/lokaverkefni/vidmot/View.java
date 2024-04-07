@@ -1,7 +1,19 @@
 package is.hi.lokaverkefni.vidmot;
 
-public class View {
-    public static void main(String[] args) {
+/**
+ * @author Almas Baimagambetov (almaslvl@gmail.com)
+ */
+public enum View {
+    LOGIN("/is/hi/lokaverkefni/login-view.fxml"),
+    ROULLETTE("/is/hi/lokaverkefni/hello-view.fxml");
 
+    private String fileName;
+
+    View(String fileName) {
+        this.fileName = fileName;
+    }
+
+    public String getFileName() {
+        return fileName;
     }
 }
