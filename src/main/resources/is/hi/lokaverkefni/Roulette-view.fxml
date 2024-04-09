@@ -74,7 +74,7 @@
       <Button layoutX="48.0" layoutY="123.0" mnemonicParsing="false" prefHeight="175.0" prefWidth="175.0" style="-fx-background-radius: 100; -fx-background-color: #35654d;" textOverrun="CLIP" />
       <Text layoutX="57.0" layoutY="347.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 20;" text="BALANCE:" wrappingWidth="128.21630859375" />
       <Text layoutX="332.0" layoutY="347.0" strokeType="OUTSIDE" strokeWidth="0.0" text="YOUR BET:" />
-      <Label layoutX="121.0" layoutY="334.0" />
-      <Label layoutX="394.0" layoutY="334.0" />
+      <Label fx:id="fxNafn" layoutX="121.0" layoutY="334.0" />
+      <Label fx:id="fxUpphaed" layoutX="394.0" layoutY="334.0" />
    </children>
 </AnchorPane>
