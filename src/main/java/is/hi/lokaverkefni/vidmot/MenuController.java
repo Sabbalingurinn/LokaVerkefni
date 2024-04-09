@@ -1,9 +1,12 @@
 package is.hi.lokaverkefni.vidmot;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextInputDialog;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
 import java.util.Optional;
 
@@ -12,12 +15,17 @@ public class MenuController {
     private RoulletteController roulletteController;
     private String nafn;
 
+    private Image image = new Image("file:src/main/resources/is/hi/lokaverkefni/css/media/offTakki.png");
+
+    @FXML
+    private ImageView imageView;
+
+    public void initialize() {
+        imageView.setImage(image);
+    }
+
     public static final String VILTU_HAETTA = "Viltu hætta? ";
     public static final String INFO= "Þetta forrit er Rouletta sem þú getur spilað með gervi pening" ;
-
-    public void initialize(){
-
-    }
 
     public void onHaetta(ActionEvent actionEvent) {
         Alert alert = new Alert(Alert.AlertType.WARNING, VILTU_HAETTA);
