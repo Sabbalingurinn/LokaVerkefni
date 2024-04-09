@@ -15,10 +15,11 @@ public class RoulletteController {
     @FXML
     private Label fxNafn;
 
+    private MenuController menuController;
     private LoginController loginController;
 
     public void initialize(){
-
+        menuController.setRoulletteController(this);
     }
 
     @FXML

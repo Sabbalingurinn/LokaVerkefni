@@ -11,7 +11,7 @@ import java.util.Optional;
 
 public class MenuController {
 
-    private RoulletteController roulletteController;
+    private RoulletteController roulletteController = new RoulletteController();
 
     public static final String VILTU_HAETTA = "Viltu hætta? ";
     public static final String INFO= "Þetta forrit er Rouletta sem þú getur spilað með gervi pening" ;
@@ -57,7 +57,6 @@ public class MenuController {
 
     public void setRoulletteController(RoulletteController roulletteController){
         this.roulletteController = roulletteController;
-
     }
 
 
