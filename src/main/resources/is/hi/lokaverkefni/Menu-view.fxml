@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 
-<MenuBar xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="is.hi.lokaverkefni.vidmot.MenuController">
+<MenuBar xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="is.hi.lokaverkefni.vidmot.MenuController">
     <menus>
         <Menu mnemonicParsing="false" text="Leikmaður">
             <items>
@@ -22,10 +20,13 @@
          <items>
             <MenuItem mnemonicParsing="false" onAction="#onProfill" styleClass="offTakkamynd" text="Leikreglur" />
          </items></Menu>
-        <Menu mnemonicParsing="false" onAction="#onHaetta" >
+        <Menu mnemonicParsing="false" onAction="#onHaetta">
          <graphic>
-            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" fx:id="imageView" />
+            <ImageView fx:id="imageView" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" />
          </graphic>
+         <items>
+            <MenuItem mnemonicParsing="false" text="Hætta" onAction="#onHaetta" />
+         </items>
         </Menu>
     </menus>
 </MenuBar>

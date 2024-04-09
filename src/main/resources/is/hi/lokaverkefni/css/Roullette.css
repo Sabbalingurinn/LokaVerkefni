@@ -4,6 +4,12 @@
    -fx-background-size: cover;
 }
 
+.spinRoulletteMynd {
+-fx-background-image:
+   url("media/rullettuBord.png");
+   -fx-background-size: cover;
+}
+
 .offTakkamynd {
 -fx-background-image:
    url("media/offTakki.png");

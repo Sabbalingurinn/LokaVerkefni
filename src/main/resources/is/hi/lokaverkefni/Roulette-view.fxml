@@ -2,16 +2,17 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #35654d;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="is.hi.lokaverkefni.vidmot.RoulletteController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #35654d;" stylesheets="@css/Roullette.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="is.hi.lokaverkefni.vidmot.RoulletteController">
    <children>
        <fx:include source="Menu-view.fxml" />
-      <GridPane layoutX="276.0" layoutY="129.0" prefHeight="167.0" prefWidth="297.0">
+      <GridPane fx:id="fxBord" layoutX="276.0" layoutY="129.0" prefHeight="167.0" prefWidth="297.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -30,52 +31,58 @@
             <RowConstraints maxHeight="36.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button contentDisplay="CENTER" maxHeight="79.0" maxWidth="95.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" text="1" textFill="RED" />
-            <Button mnemonicParsing="false" prefHeight="79.0" prefWidth="148.0" text="2" GridPane.columnIndex="1" />
-            <Button mnemonicParsing="false" prefHeight="102.0" prefWidth="72.0" text="3" textFill="RED" GridPane.columnIndex="2" />
-            <Button mnemonicParsing="false" prefHeight="146.0" prefWidth="75.0" text="4" GridPane.columnIndex="3" />
-            <Button mnemonicParsing="false" prefHeight="111.0" prefWidth="97.0" text="5" textFill="RED" GridPane.columnIndex="4" />
-            <Button mnemonicParsing="false" prefHeight="110.0" prefWidth="75.0" text="6" GridPane.columnIndex="5" />
-            <Button mnemonicParsing="false" prefHeight="110.0" prefWidth="115.0" text="7" textFill="RED" GridPane.columnIndex="6" />
-            <Button mnemonicParsing="false" prefHeight="103.0" prefWidth="125.0" text="8" GridPane.columnIndex="7" />
-            <Button mnemonicParsing="false" prefHeight="122.0" prefWidth="123.0" text="9" textFill="RED" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" prefHeight="99.0" prefWidth="90.0" text="17" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="93.0" text="25" textFill="RED" GridPane.rowIndex="3" />
-            <Button mnemonicParsing="false" prefHeight="133.0" prefWidth="100.0" text="33" GridPane.rowIndex="4" />
-            <Button mnemonicParsing="false" prefHeight="97.0" prefWidth="79.0" text="10" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" prefHeight="74.0" prefWidth="73.0" text="11" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" prefHeight="92.0" prefWidth="140.0" text="12" textFill="RED" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="74.0" text="13" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" prefHeight="128.0" prefWidth="103.0" text="34" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <Button mnemonicParsing="false" prefHeight="97.0" prefWidth="71.0" text="26" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <Button mnemonicParsing="false" prefHeight="88.0" prefWidth="69.0" text="18" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" prefHeight="85.0" prefWidth="83.0" text="19" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="162.0" text="27" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-            <Button mnemonicParsing="false" prefHeight="57.0" prefWidth="71.0" text="35" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-            <Button mnemonicParsing="false" prefHeight="182.0" prefWidth="193.0" text="36" textFill="RED" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-            <Button mnemonicParsing="false" prefHeight="166.0" prefWidth="83.0" text="28" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-            <Button mnemonicParsing="false" prefHeight="119.0" prefWidth="100.0" text="20" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" prefHeight="74.0" prefWidth="118.0" text="14" textFill="RED" GridPane.columnIndex="5" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" prefHeight="78.0" prefWidth="113.0" text="15" GridPane.columnIndex="6" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" prefHeight="87.0" prefWidth="108.0" text="16" textFill="RED" GridPane.columnIndex="7" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" prefHeight="121.0" prefWidth="75.0" text="21" textFill="RED" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" prefHeight="73.0" prefWidth="79.0" text="29" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-            <Button mnemonicParsing="false" prefHeight="140.0" prefWidth="73.0" text="22" GridPane.columnIndex="5" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="81.0" text="23" textFill="RED" GridPane.columnIndex="6" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" prefHeight="66.0" prefWidth="107.0" text="24" GridPane.columnIndex="7" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" prefHeight="81.0" prefWidth="83.0" text="30" textFill="RED" GridPane.columnIndex="5" GridPane.rowIndex="3" />
-            <Button mnemonicParsing="false" prefHeight="136.0" prefWidth="120.0" text="32" textFill="RED" GridPane.columnIndex="7" GridPane.rowIndex="3" />
-            <Button mnemonicParsing="false" prefHeight="76.0" prefWidth="76.0" text="31" GridPane.columnIndex="6" GridPane.rowIndex="3" />
-            <Button mnemonicParsing="false" prefHeight="124.0" prefWidth="92.0" style="-fx-background-color: #06a737;" text="0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
-            <Button mnemonicParsing="false" prefHeight="132.0" prefWidth="88.0" style="-fx-background-color: #FF0000;" text="R" textFill="RED" GridPane.columnIndex="6" GridPane.rowIndex="4" />
-            <Button mnemonicParsing="false" prefHeight="118.0" prefWidth="60.0" style="-fx-background-color: #000000;" GridPane.columnIndex="7" GridPane.rowIndex="4" />
-            <Button layoutX="269.0" layoutY="151.0" mnemonicParsing="false" prefHeight="82.0" prefWidth="46.0" style="-fx-background-color: #06a737;" text="00" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+            <Button contentDisplay="CENTER" maxHeight="79.0" maxWidth="95.0" mnemonicParsing="false" onAction="#onVedja" prefHeight="25.0" prefWidth="95.0" text="1" textFill="RED" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <Button mnemonicParsing="false" onAction="#onVedja" prefHeight="79.0" prefWidth="148.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <Button mnemonicParsing="false" onAction="#onVedja" prefHeight="102.0" prefWidth="72.0" text="3" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+            <Button mnemonicParsing="false" onAction="#onVedja" prefHeight="146.0" prefWidth="75.0" text="4" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+            <Button mnemonicParsing="false" onAction="#onVedja" prefHeight="111.0" prefWidth="97.0" text="5" textFill="RED" GridPane.columnIndex="4" GridPane.rowIndex="0" />
+            <Button mnemonicParsing="false" onAction="#onVedja" prefHeight="110.0" prefWidth="75.0" text="6" GridPane.columnIndex="5" GridPane.rowIndex="0" />
+            <Button mnemonicParsing="false" onAction="#onVedja" prefHeight="110.0" prefWidth="115.0" text="7" textFill="RED" GridPane.columnIndex="6" GridPane.rowIndex="0" />
+            <Button mnemonicParsing="false" onAction="#onVedja" prefHeight="103.0" prefWidth="125.0" text="8" GridPane.columnIndex="7" GridPane.rowIndex="0" />
+            <Button mnemonicParsing="false" onAction="#onVedja" prefHeight="122.0" prefWidth="123.0" text="9" textFill="RED" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#onVedja" prefHeight="99.0" prefWidth="90.0" text="17" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#onVedja" prefHeight="71.0" prefWidth="93.0" text="25" textFill="RED" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <Button mnemonicParsing="false" onAction="#onVedja" prefHeight="133.0" prefWidth="100.0" text="33" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+            <Button mnemonicParsing="false" onAction="#onVedja" prefHeight="97.0" prefWidth="79.0" text="10" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#onVedja" prefHeight="74.0" prefWidth="73.0" text="11" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#onVedja" prefHeight="92.0" prefWidth="140.0" text="12" textFill="RED" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#onVedja" prefHeight="70.0" prefWidth="74.0" text="13" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#onVedja" prefHeight="128.0" prefWidth="103.0" text="34" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Button mnemonicParsing="false" onAction="#onVedja" prefHeight="97.0" prefWidth="71.0" text="26" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button mnemonicParsing="false" onAction="#onVedja" prefHeight="88.0" prefWidth="69.0" text="18" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#onVedja" prefHeight="85.0" prefWidth="83.0" text="19" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#onVedja" prefHeight="80.0" prefWidth="162.0" text="27" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Button mnemonicParsing="false" onAction="#onVedja" prefHeight="57.0" prefWidth="71.0" text="35" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Button mnemonicParsing="false" onAction="#onVedja" prefHeight="182.0" prefWidth="193.0" text="36" textFill="RED" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <Button mnemonicParsing="false" onAction="#onVedja" prefHeight="166.0" prefWidth="83.0" text="28" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Button mnemonicParsing="false" onAction="#onVedja" prefHeight="119.0" prefWidth="100.0" text="20" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#onVedja" prefHeight="74.0" prefWidth="118.0" text="14" textFill="RED" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#onVedja" prefHeight="78.0" prefWidth="113.0" text="15" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#onVedja" prefHeight="87.0" prefWidth="108.0" text="16" textFill="RED" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#onVedja" prefHeight="121.0" prefWidth="75.0" text="21" textFill="RED" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#onVedja" prefHeight="73.0" prefWidth="79.0" text="29" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <Button mnemonicParsing="false" onAction="#onVedja" prefHeight="140.0" prefWidth="73.0" text="22" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#onVedja" prefHeight="100.0" prefWidth="81.0" text="23" textFill="RED" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#onVedja" prefHeight="66.0" prefWidth="107.0" text="24" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#onVedja" prefHeight="81.0" prefWidth="83.0" text="30" textFill="RED" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+            <Button mnemonicParsing="false" onAction="#onVedja" prefHeight="136.0" prefWidth="120.0" text="32" textFill="RED" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+            <Button mnemonicParsing="false" onAction="#onVedja" prefHeight="76.0" prefWidth="76.0" text="31" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+            <Button mnemonicParsing="false" onAction="#onVedja" prefHeight="124.0" prefWidth="92.0" style="-fx-background-color: #06a737;" text="0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            <Button mnemonicParsing="false" onAction="#onVedja" prefHeight="132.0" prefWidth="88.0" style="-fx-background-color: #FF0000;" text="R" textFill="RED" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+            <Button mnemonicParsing="false" onAction="#onVedja" prefHeight="118.0" prefWidth="60.0" style="-fx-background-color: #000000;" text="B" textFill="black" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+            <Button layoutX="269.0" layoutY="151.0" mnemonicParsing="false" onAction="#onVedja" prefHeight="82.0" prefWidth="46.0" style="-fx-background-color: #06a737;" text="00" GridPane.columnIndex="5" GridPane.rowIndex="4" />
          </children>
       </GridPane>
-      <Button layoutX="48.0" layoutY="123.0" mnemonicParsing="false" prefHeight="175.0" prefWidth="175.0" style="-fx-background-radius: 100; -fx-background-color: #35654d;" textOverrun="CLIP" />
+      <Button layoutX="48.0" layoutY="123.0" mnemonicParsing="false" onAction="#onRoulletteSpin" prefHeight="175.0" prefWidth="175.0" style="-fx-background-radius: 100; -fx-background-color: #35654d;" styleClass="spinRoulletteMynd" textOverrun="CLIP" />
       <Text layoutX="57.0" layoutY="347.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 20;" text="BALANCE:" wrappingWidth="128.21630859375" />
       <Text layoutX="332.0" layoutY="347.0" strokeType="OUTSIDE" strokeWidth="0.0" text="YOUR BET:" />
-      <Label fx:id="fxNafn" layoutX="121.0" layoutY="334.0" />
-      <Label fx:id="fxUpphaed" layoutX="394.0" layoutY="334.0" />
+      <Label fx:id="fxInnistaeda" layoutX="121.0" layoutY="334.0" />
+      <TextField fx:id="fxBettUpphaed" layoutX="401.0" layoutY="330.0" />
+      <Text layoutX="72.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ýttu á hjólið til að fá tölu" />
+      <Text layoutX="277.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ýttu á þá reiti sem þú vilt veðja á. Þú átt " />
+      <Label fx:id="fxFjoldiVedmal" layoutX="489.0" layoutY="107.0" text="3/3" />
+      <Text layoutX="509.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" veðmál eftir" />
+      <Button disable="true" layoutX="474.0" layoutY="40.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" fx:id="fxTalanSemDatt" />
+      <Text layoutX="383.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Talan sem datt:" />
    </children>
 </AnchorPane>
