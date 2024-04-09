@@ -5,6 +5,8 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.image.ImageView?>
 
+
+<?import javafx.scene.image.Image?>
 <MenuBar xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="is.hi.lokaverkefni.vidmot.MenuController">
     <menus>
         <Menu mnemonicParsing="false" text="Leikmadur">
@@ -21,7 +23,9 @@
         </Menu>
         <Menu mnemonicParsing="false" onAction="#onHaetta">
             <graphic>
-                <ImageView fitHeight="22.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true" image="#o"/>
+                <ImageView fitHeight="22.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true" image="#o">
+                    <Image url="@css/media/offTakki.svg"></Image>
+                </ImageView>
             </graphic>
         </Menu>
     </menus>
