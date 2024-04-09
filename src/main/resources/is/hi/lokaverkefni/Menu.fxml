@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.ImageView?>
+
+<MenuBar xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="is.hi.lokaverkefni.vidmot.MenuController">
+    <menus>
+        <Menu mnemonicParsing="false" text="Leikmadur">
+            <items>
+                <MenuItem mnemonicParsing="false" text="Leikmadur" />
+            </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Banki">
+            <items>
+                <MenuItem mnemonicParsing="false" text="Leggja inn pening" onAction="#onBanki"/>
+            </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Info" onAction="#onInfo">
+        </Menu>
+        <Menu mnemonicParsing="false" onAction="#onHaetta">
+            <graphic>
+                <ImageView fitHeight="22.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true" />
+            </graphic>
+        </Menu>
+    </menus>
+</MenuBar>
