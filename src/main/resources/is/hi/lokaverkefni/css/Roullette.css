@@ -1,0 +1,5 @@
+.loginRoulletteMynd {
+-fx-background-image:
+   url("media/LoginRoullette.png");
+   -fx-background-size: cover;
+}
