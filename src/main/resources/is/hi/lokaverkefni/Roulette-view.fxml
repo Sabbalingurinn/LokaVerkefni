@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ButtonBar?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #35654d;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #35654d;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="is.hi.lokaverkefni.vidmot.RoulletteController">
    <children>
       <GridPane layoutX="276.0" layoutY="129.0" prefHeight="167.0" prefWidth="297.0">
         <columnConstraints>
@@ -74,64 +71,10 @@
             <Button layoutX="269.0" layoutY="151.0" mnemonicParsing="false" prefHeight="82.0" prefWidth="46.0" style="-fx-background-color: #06a737;" text="00" GridPane.columnIndex="5" GridPane.rowIndex="4" />
          </children>
       </GridPane>
-      <Button layoutX="48.0" layoutY="123.0" mnemonicParsing="false" prefHeight="175.0" prefWidth="150.0" style="-fx-background-radius: 100; -fx-background-color: #35654d;" textOverrun="CLIP" />
-      <ButtonBar prefHeight="0.0" prefWidth="600.0" style="-fx-background-color: #35654d;">
-        <buttons>
-            <Button alignment="CENTER" contentDisplay="CENTER" minWidth="69.0" mnemonicParsing="false" prefHeight="69.0" prefWidth="158.0" style="-fx-background-color: #35654d;" textAlignment="CENTER" textOverrun="CLIP">
-               <graphic>
-                  <ImageView fitHeight="56.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../../../../User_Icon.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <font>
-                  <Font size="1.0" />
-               </font></Button>
-          <Button minWidth="62.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="190.0" style="-fx-background-color: #35654d;">
-               <graphic>
-                  <ImageView fitHeight="58.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../../../../bank-icon.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <font>
-                  <Font size="1.0" />
-               </font></Button>
-            <Button minWidth="63.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="204.0" style="-fx-background-color: #35654d;">
-               <graphic>
-                  <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../../../../info-logo.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <font>
-                  <Font size="1.0" />
-               </font></Button>
-            <Button mnemonicParsing="false" opacity="0.0" text="0" />
-            <Button layoutX="384.0" layoutY="25.0" mnemonicParsing="false" opacity="0.0" text="0" />
-            <Button layoutX="325.0" layoutY="25.0" mnemonicParsing="false" opacity="0.0" text="0" />
-            <Button minWidth="55.0" mnemonicParsing="false" prefHeight="36.0" style="-fx-background-color: #35654d;">
-               <graphic>
-                  <ImageView fitHeight="44.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../../../../quit-3.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <font>
-                  <Font size="1.0" />
-               </font></Button>
-        </buttons>
-      </ButtonBar>
+      <Button layoutX="48.0" layoutY="123.0" mnemonicParsing="false" prefHeight="175.0" prefWidth="175.0" style="-fx-background-radius: 100; -fx-background-color: #35654d;" textOverrun="CLIP" />
       <Text layoutX="57.0" layoutY="347.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 20;" text="BALANCE:" wrappingWidth="128.21630859375" />
-      <Text layoutX="330.0" layoutY="339.0" strokeType="OUTSIDE" strokeWidth="0.0" text="YOUR BET:" />
-      <ImageView fitHeight="170.0" fitWidth="170.0" layoutX="62.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-radius: 100;">
-         <image>
-            <Image url="@../../../../../../../../AMERICAN-Wheel.png" />
-         </image>
-      </ImageView>
+      <Text layoutX="332.0" layoutY="347.0" strokeType="OUTSIDE" strokeWidth="0.0" text="YOUR BET:" />
+      <Label layoutX="121.0" layoutY="334.0" />
+      <Label layoutX="394.0" layoutY="334.0" />
    </children>
 </AnchorPane>
