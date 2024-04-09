@@ -3,3 +3,9 @@
    url("media/LoginRoullette.png");
    -fx-background-size: cover;
 }
+
+.offTakkamynd {
+-fx-background-image:
+   url("media/offTakki.png");
+   -fx-background-size: cover;
+}

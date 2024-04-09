@@ -1,12 +1,10 @@
 package is.hi.lokaverkefni.vidmot;
 
 import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextInputDialog;
 
-import java.io.IOException;
 import java.util.Optional;
 
 public class MenuController {
@@ -26,11 +24,12 @@ public class MenuController {
     }
 
     public void onBanki(){
-        try {
+        /**try {
             FXMLLoader.load(getClass().getResource("Bank-Dialog.fxml"));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+         **/
 
         TextInputDialog banki = new TextInputDialog();
 

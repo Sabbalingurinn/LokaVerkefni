@@ -7,7 +7,7 @@
 
 
 <?import javafx.scene.image.Image?>
-<MenuBar xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="is.hi.lokaverkefni.vidmot.MenuController">
+<MenuBar xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="is.hi.lokaverkefni.vidmot.MenuController" stylesheets="@css/Roullette.css">
     <menus>
         <Menu mnemonicParsing="false" text="Leikmadur">
             <items>
@@ -21,7 +21,7 @@
         </Menu>
         <Menu mnemonicParsing="false" text="Info" onAction="#onInfo">
         </Menu>
-        <Menu mnemonicParsing="false" onAction="#onHaetta">
+        <Menu mnemonicParsing="false" onAction="#onHaetta" styleClass="offTakkamynd">
 
         </Menu>
     </menus>
