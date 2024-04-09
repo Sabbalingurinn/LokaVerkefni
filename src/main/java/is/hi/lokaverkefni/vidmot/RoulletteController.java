@@ -19,7 +19,7 @@ public class RoulletteController {
     private LoginController loginController;
 
     public void initialize(){
-        menuController.setRoulletteController(this);
+        //menuController.setRoulletteController(this);
     }
 
     @FXML
