@@ -1,10 +1,8 @@
 package is.hi.lokaverkefni.vidmot;
 
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
-import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextInputDialog;
 
 import java.util.Optional;
@@ -13,9 +11,6 @@ public class MenuController {
 
     private RoulletteController roulletteController;
     private String nafn;
-
-    @FXML
-    private MenuItem menuItem;
 
     public static final String VILTU_HAETTA = "Viltu hætta? ";
     public static final String INFO= "Þetta forrit er Rouletta sem þú getur spilað með gervi pening" ;
@@ -60,9 +55,11 @@ public class MenuController {
 
     }
 
-    public void onLeikmadur(){
+    public void onProfill(){
         roulletteController = (RoulletteController) ViewSwitcher.getController(View.ROULLETTE);
         roulletteController.setMenuController(this);
+        Alert alert = new Alert(Alert.AlertType.INFORMATION, nafn);
+        alert.showAndWait();
     }
 
 
@@ -78,7 +75,6 @@ public class MenuController {
 
     public void setNafn(String nafn){
         this.nafn = nafn;
-        menuItem.setText(nafn);
     }
 
 

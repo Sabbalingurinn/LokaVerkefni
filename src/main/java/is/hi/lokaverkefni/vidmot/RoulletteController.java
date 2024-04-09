@@ -29,6 +29,8 @@ public class RoulletteController {
 
     public void setLoginController(LoginController loginController) {
         this.loginController = loginController;
+        upphaed = loginController.getUpphaed();
+        nafn = loginController.getNafn();
         fxUpphaed.setText(""+loginController.getUpphaed());
         fxNafn.setText(loginController.getNafn());
     }
@@ -39,10 +41,11 @@ public class RoulletteController {
     }
 
     public void setUpphaed(int upphaed) {
-        int gamlaUpphaed = upphaed;
-        this.upphaed = gamlaUpphaed + gamlaUpphaed;
-        System.out.println(this.upphaed);
-        fxUpphaed.setText(this.upphaed+"");
+        if(upphaed >= 0) {
+            this.upphaed += upphaed;
+            System.out.println(this.upphaed);
+            fxUpphaed.setText(this.upphaed + "");
+        }
     }
 
     public String getNafn() {
