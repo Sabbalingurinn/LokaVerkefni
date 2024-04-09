@@ -21,7 +21,7 @@
         </Menu>
         <Menu mnemonicParsing="false" onAction="#onHaetta">
             <graphic>
-                <ImageView fitHeight="22.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true" />
+                <ImageView fitHeight="22.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true" image="#o"/>
             </graphic>
         </Menu>
     </menus>
