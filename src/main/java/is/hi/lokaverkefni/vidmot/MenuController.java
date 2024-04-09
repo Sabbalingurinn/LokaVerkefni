@@ -1,19 +1,28 @@
 package is.hi.lokaverkefni.vidmot;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextInputDialog;
 
 import java.util.Optional;
 
 public class MenuController {
 
-    private RoulletteController roulletteController = new RoulletteController();
+    private RoulletteController roulletteController;
+    private String nafn;
+
+    @FXML
+    private MenuItem menuItem;
 
     public static final String VILTU_HAETTA = "Viltu hætta? ";
     public static final String INFO= "Þetta forrit er Rouletta sem þú getur spilað með gervi pening" ;
 
+    public void initialize(){
+
+    }
 
     public void onHaetta(ActionEvent actionEvent) {
         Alert alert = new Alert(Alert.AlertType.WARNING, VILTU_HAETTA);
@@ -43,9 +52,17 @@ public class MenuController {
 
         String peningur = upphaed.get();
 
+        roulletteController = (RoulletteController) ViewSwitcher.getController(View.ROULLETTE);
+        roulletteController.setMenuController(this);
+        roulletteController.setUpphaed(Integer.parseInt(peningur));
 
         banki.close();
 
+    }
+
+    public void onLeikmadur(){
+        roulletteController = (RoulletteController) ViewSwitcher.getController(View.ROULLETTE);
+        roulletteController.setMenuController(this);
     }
 
 
@@ -55,7 +72,13 @@ public class MenuController {
     }
 
     public void setRoulletteController(RoulletteController roulletteController){
+        setNafn(roulletteController.getNafn());
         this.roulletteController = roulletteController;
+    }
+
+    public void setNafn(String nafn){
+        this.nafn = nafn;
+        menuItem.setText(nafn);
     }
 
 

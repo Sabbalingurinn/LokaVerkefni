@@ -19,7 +19,7 @@ public class RoulletteController {
     private LoginController loginController;
 
     public void initialize(){
-        //menuController.setRoulletteController(this);
+
     }
 
     @FXML
@@ -31,5 +31,21 @@ public class RoulletteController {
         this.loginController = loginController;
         fxUpphaed.setText(""+loginController.getUpphaed());
         fxNafn.setText(loginController.getNafn());
+    }
+
+    public void setMenuController(MenuController menuController) {
+        menuController.setNafn(loginController.getNafn());
+        this.menuController = menuController;
+    }
+
+    public void setUpphaed(int upphaed) {
+        int gamlaUpphaed = upphaed;
+        this.upphaed = gamlaUpphaed + gamlaUpphaed;
+        System.out.println(this.upphaed);
+        fxUpphaed.setText(this.upphaed+"");
+    }
+
+    public String getNafn() {
+        return nafn;
     }
 }

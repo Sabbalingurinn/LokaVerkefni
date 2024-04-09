@@ -3,24 +3,23 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.image.ImageView?>
 
-
-<?import javafx.scene.image.Image?>
-<MenuBar xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="is.hi.lokaverkefni.vidmot.MenuController" stylesheets="@css/Roullette.css">
+<MenuBar stylesheets="@css/Roullette.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="is.hi.lokaverkefni.vidmot.MenuController">
     <menus>
-        <Menu mnemonicParsing="false" text="Leikmadur">
+        <Menu mnemonicParsing="false" text="Leikmaður">
             <items>
-                <MenuItem mnemonicParsing="false" text="Leikmadur" />
+                <MenuItem fx:id="menuItem" mnemonicParsing="false" text="Prófíll" />
             </items>
         </Menu>
         <Menu mnemonicParsing="false" text="Banki">
             <items>
-                <MenuItem mnemonicParsing="false" text="Leggja inn pening" onAction="#onBanki"/>
+                <MenuItem mnemonicParsing="false" onAction="#onBanki" text="Leggja inn pening" />
             </items>
         </Menu>
-        <Menu mnemonicParsing="false" text="Info" onAction="#onInfo">
-        </Menu>
+        <Menu mnemonicParsing="false" onAction="#onInfo" text="Hjálp">
+         <items>
+            <MenuItem mnemonicParsing="false" text="Leikreglur" />
+         </items></Menu>
         <Menu mnemonicParsing="false" onAction="#onHaetta" styleClass="offTakkamynd">
 
         </Menu>

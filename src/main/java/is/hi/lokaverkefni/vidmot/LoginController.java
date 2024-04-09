@@ -13,6 +13,7 @@ public class LoginController {
     private Button fxILagi;
 
     private RoulletteController roulletteController;
+    private MenuController menuController;
 
     public void initialize() {
         fxILagi.disableProperty().bind(fxNafn.textProperty().isEmpty().or(fxUpphaed.textProperty().isEmpty()));
@@ -23,6 +24,7 @@ public class LoginController {
         ViewSwitcher.switchTo(View.ROULLETTE);
         roulletteController = (RoulletteController) ViewSwitcher.getController(View.ROULLETTE);
         roulletteController.setLoginController(this);
+
     }
 
     @FXML
