@@ -55,6 +55,27 @@ public class MenuController {
 
     }
 
+    public void onBankiUt(){
+        TextInputDialog banki = new TextInputDialog();
+
+        banki.setTitle("Banki");
+
+        banki.setHeaderText("Hversu mikinn pening viltu taka út?");
+
+        banki.setContentText("Skrifaðu hér:");
+
+        Optional<String> upphaed = banki.showAndWait();
+
+        String peningur = upphaed.get();
+
+        roulletteController = (RoulletteController) ViewSwitcher.getController(View.ROULLETTE);
+        roulletteController.setMenuController(this);
+        roulletteController.setUpphaedMinus(Integer.parseInt(peningur));
+
+        banki.close();
+
+    }
+
     public void onProfill(){
         roulletteController = (RoulletteController) ViewSwitcher.getController(View.ROULLETTE);
         roulletteController.setMenuController(this);

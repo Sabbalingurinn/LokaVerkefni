@@ -48,6 +48,14 @@ public class RoulletteController {
         }
     }
 
+    public void setUpphaedMinus(int upphaed) {
+        if(upphaed >= 0 && upphaed <= this.upphaed) {
+            this.upphaed -= upphaed;
+            System.out.println(this.upphaed);
+            fxUpphaed.setText(this.upphaed + "");
+        }
+    }
+
     public String getNafn() {
         return nafn;
     }

@@ -12,6 +12,7 @@
         <Menu mnemonicParsing="false" text="Banki">
             <items>
                 <MenuItem mnemonicParsing="false" onAction="#onBanki" text="Leggja inn pening" />
+                <MenuItem mnemonicParsing="false" onAction="#onBankiUt" text="Taka út pening" />
             </items>
         </Menu>
         <Menu mnemonicParsing="false" onAction="#onInfo" text="Hjálp">
