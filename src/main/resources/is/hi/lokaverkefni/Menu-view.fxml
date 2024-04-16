@@ -18,7 +18,7 @@
         </Menu>
         <Menu mnemonicParsing="false" onAction="#onInfo" text="Hjálp">
          <items>
-            <MenuItem mnemonicParsing="false" onAction="#onProfill" styleClass="offTakkamynd" text="Leikreglur" />
+            <MenuItem mnemonicParsing="false" text="Leikreglur" />
          </items></Menu>
         <Menu mnemonicParsing="false" onAction="#onHaetta">
          <graphic>

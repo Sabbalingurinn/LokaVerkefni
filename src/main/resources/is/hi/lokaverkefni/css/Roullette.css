@@ -15,3 +15,9 @@
    url("media/offTakki.png");
    -fx-background-size: cover;
 }
+
+.backgroundRoulette {
+-fx-background-image:
+   url("media/backgroundRoulette.png");
+   -fx-background-size: cover;
+}
