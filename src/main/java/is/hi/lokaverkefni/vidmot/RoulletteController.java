@@ -64,17 +64,29 @@ public class RoulletteController {
      */
     public void onRoulletteSpin(){
         if (athugaLoglegBetUpphaed()) {
-            upphaed = upphaed - fjoldiVedmal * Integer.parseInt(fxBettUpphaed.getText());
+            upphaed = upphaed + roulette.spin(Integer.parseInt(fxBettUpphaed.getText()));
             fxInnistaeda.setText("" + upphaed);
         } else {
-            ologlegUpphaed();
+            ofHaUpphaed();
         }
         endurStillaAllt();
         finnaToluSemDatt();
     }
 
+    /**
+     * Byrtir Alert ef upphæð er ólögleg.
+     */
     public void ologlegUpphaed(){
-        Alert alert = new Alert(Alert.AlertType.ERROR, "Ólögleg upphæð.");
+        Alert alert = new Alert(Alert.AlertType.WARNING, "Vinsamlegast skrifaðu inn löglega upphæð.");
+        Optional<ButtonType> optional = alert.showAndWait();
+        if (optional.isPresent() && optional.get().equals(ButtonType.OK)) { }
+    }
+
+    /**
+     * Byrtir Alert ef upphæð er of há.
+     */
+    public void ofHaUpphaed(){
+        Alert alert = new Alert(Alert.AlertType.WARNING, "Vinsamlegast skrifaðu inn lægri upphæð.");
         Optional<ButtonType> optional = alert.showAndWait();
         if (optional.isPresent() && optional.get().equals(ButtonType.OK)) { }
     }
@@ -90,7 +102,6 @@ public class RoulletteController {
 
     /**
      * Endurstilla allt.
-     *
      */
     public void endurStillaAllt(){
         fjoldiVedmal = 0;
@@ -104,6 +115,7 @@ public class RoulletteController {
         fxBettUpphaed.setText("");
         fxSpin.setDisable(true);
         fxBettUpphaed.setDisable(false);
+        roulette.setFjoldiBet(0);
     }
 
     /**
@@ -188,6 +200,8 @@ public class RoulletteController {
             if (athugaLoglegBetUpphaed()) {
                 fxSpin.setDisable(false);
                 fxBettUpphaed.setDisable(true);
+            } else {
+                ofHaUpphaed();
             }
         } catch (Exception e) {
             ologlegUpphaed();
@@ -195,14 +209,13 @@ public class RoulletteController {
     }
 
     /**
-     * Endurstillir bet upphæð.
+     * Endurstillir allt.
      *
      * @param  actionEvent  atburðurinn sem kveikti á aðgerðinni
      */
     @FXML
     public void onBetHaettaVid(ActionEvent actionEvent) {
-        fxSpin.setDisable(true);
-        fxBettUpphaed.setDisable(false);
+        endurStillaAllt();
     }
 
     /**
