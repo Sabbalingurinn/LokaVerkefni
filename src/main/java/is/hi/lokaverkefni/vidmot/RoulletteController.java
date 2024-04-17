@@ -29,6 +29,11 @@ public class RoulletteController {
     private MenuController menuController;
     private LoginController loginController;
 
+    /**
+     * Meðhöndlar atburð þegar smellt er á hnapp.
+     *
+     * @param  actionEvent  atburðurinn sem kveikti á aðgerðinni
+     */
     public void onVedja(ActionEvent actionEvent) {
         Button reitur = (Button) actionEvent.getSource();
 
@@ -42,6 +47,7 @@ public class RoulletteController {
             roulette.baetaVidToluVedmal(Integer.parseInt(reitur.getText()));
         }
         reitur.setDisable(true);
+        reitur.getStyleClass().add("casinoChip");
 
         fjoldiVedmal++;
         if(fjoldiVedmal == 3) {
@@ -51,7 +57,9 @@ public class RoulletteController {
         fxFjoldiVedmal.setText((3-fjoldiVedmal) + "/3");
 
     }
-
+    /**
+     * Framkvæmir "spin" aðgerð á roulette borðinu.
+     */
     public void onRoulletteSpin(){
         try {
             if(upphaed - Integer.parseInt(fxBettUpphaed.getText()) > 0) {
@@ -74,6 +82,9 @@ public class RoulletteController {
         finnaToluSemDatt();
     }
 
+    /**
+     * Finnur út og uppfærir hver talan var sem kom út úr síðasta `onRoulletteSpin`.
+     */
     public void finnaToluSemDatt(){
         int talaSemDatt = roulette.getSidastaTala();
 
@@ -94,6 +105,11 @@ public class RoulletteController {
         }
     }
 
+    /**
+     * Stillir loginController sem þessi stjórnandi á að nota.
+     *
+     * @param loginController loginController sem á að nota.
+     */
     public void setLoginController(LoginController loginController) {
         this.loginController = loginController;
         upphaed = loginController.getUpphaed();
@@ -101,11 +117,21 @@ public class RoulletteController {
         fxInnistaeda.setText(""+loginController.getUpphaed());
     }
 
+    /**
+     * Stillir menuController sem þessi stjórnandi á að nota.
+     *
+     * @param menuController menuController sem á að nota.
+     */
     public void setMenuController(MenuController menuController) {
         menuController.setNafn(loginController.getNafn());
         this.menuController = menuController;
     }
 
+    /**
+     * Uppfærir heildarupphæð notanda.
+     *
+     * @param upphaed Upphæðin sem á að bæta við.
+     */
     public void setUpphaed(int upphaed) {
         if(upphaed >= 0) {
             this.upphaed += upphaed;
@@ -114,6 +140,11 @@ public class RoulletteController {
         }
     }
 
+    /**
+     * Dregur fjárhæð frá heildarupphæð notanda.
+     *
+     * @param upphaed Upphæðin sem á að draga frá.
+     */
     public void setUpphaedMinus(int upphaed) {
         if(upphaed >= 0 && upphaed <= this.upphaed) {
             this.upphaed -= upphaed;
@@ -122,6 +153,11 @@ public class RoulletteController {
         }
     }
 
+    /**
+     * Skilar nafni notandans.
+     *
+     * @return Nafn notandans.
+     */
     public String getNafn() {
         return nafn;
     }

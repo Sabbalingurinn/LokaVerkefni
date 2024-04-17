@@ -13,7 +13,13 @@ public class BankiDialog implements Initializable {
 
     public int pening;
 
-
+    /**
+     * Upphafsstillir dialog glugga fyrir innleggingu peninga.
+     * Notar FXMLLoader til að hlaða viðmótsútlit frá 'Bank-Dialog.fxml'.
+     *
+     * @param url             URL hlutur sem bendir á staðsetningu fyrir 'initialize' (not used directly).
+     * @param resourceBundle  ResourceBundle hlutur sem inniheldur staðsetningar-eða locale-sértæk gögn.
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
@@ -42,6 +48,11 @@ public class BankiDialog implements Initializable {
 
     }
 
+    /**
+     * Skilar fjölda peninga sem notandi ákvað að leggja inn.
+     *
+     * @return Fjöldi peninga.
+     */
     public int getPening(){
         return pening;
     }
