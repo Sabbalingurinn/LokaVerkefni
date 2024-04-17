@@ -21,3 +21,10 @@
    url("media/backgroundRoulette.png");
    -fx-background-size: cover;
 }
+
+.casinoChip {
+-fx-background-image:
+   url("media/casinoChip.png");
+   -fx-background-size: cover;
+}
+
