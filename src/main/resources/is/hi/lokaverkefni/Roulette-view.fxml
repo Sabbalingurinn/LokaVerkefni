@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #35654d;" stylesheets="@css/Roullette.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="is.hi.lokaverkefni.vidmot.RoulletteController" styleClass="backgroundRoulette">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #35654d;" styleClass="backgroundRoulette" stylesheets="@css/Roullette.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="is.hi.lokaverkefni.vidmot.RoulletteController">
    <children>
        <fx:include source="Menu-view.fxml" />
       <GridPane fx:id="fxBord" layoutX="276.0" layoutY="129.0" prefHeight="167.0" prefWidth="297.0">
@@ -31,7 +26,7 @@
             <RowConstraints maxHeight="36.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button contentDisplay="CENTER" maxHeight="79.0" maxWidth="95.0" mnemonicParsing="false" onAction="#onVedja" prefHeight="25.0" prefWidth="95.0" text="1" textFill="RED" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <Button contentDisplay="CENTER" maxHeight="79.0" maxWidth="95.0" mnemonicParsing="false" onAction="#onVedja" prefHeight="33.0" prefWidth="37.0" text="1" textFill="RED" GridPane.columnIndex="0" GridPane.rowIndex="0" />
             <Button mnemonicParsing="false" onAction="#onVedja" prefHeight="79.0" prefWidth="148.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="0" />
             <Button mnemonicParsing="false" onAction="#onVedja" prefHeight="102.0" prefWidth="72.0" text="3" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="0" />
             <Button mnemonicParsing="false" onAction="#onVedja" prefHeight="146.0" prefWidth="75.0" text="4" GridPane.columnIndex="3" GridPane.rowIndex="0" />
@@ -82,7 +77,7 @@
       <Text layoutX="277.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ýttu á þá reiti sem þú vilt veðja á. Þú átt " />
       <Label fx:id="fxFjoldiVedmal" layoutX="489.0" layoutY="107.0" text="3/3" />
       <Text layoutX="509.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" veðmál eftir" />
-      <Button disable="true" layoutX="474.0" layoutY="40.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" fx:id="fxTalanSemDatt" />
+      <Button fx:id="fxTalanSemDatt" disable="true" layoutX="474.0" layoutY="40.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" />
       <Text layoutX="383.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Talan sem datt:" />
    </children>
 </AnchorPane>
