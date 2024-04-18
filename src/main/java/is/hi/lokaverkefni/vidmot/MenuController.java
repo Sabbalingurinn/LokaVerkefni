@@ -16,15 +16,27 @@ public class MenuController {
     private String nafn;
 
     private Image slokkvaHnappurMynd = new Image("file:src/main/resources/is/hi/lokaverkefni/css/media/offTakki.png");
+    private Image hjalpHnappurMynd = new Image("file:src/main/resources/is/hi/lokaverkefni/css/media/info-logo.png");
+    private Image leikmadurHnappurMynd = new Image("file:src/main/resources/is/hi/lokaverkefni/css/media/User_icon.png");
+    private Image bankiHnappurMynd = new Image("file:src/main/resources/is/hi/lokaverkefni/css/media/bank-icon.png");
 
     @FXML
     private ImageView fxSlokkvaHnappur;
+    @FXML
+    private ImageView fxHjalpHnappur;
+    @FXML
+    private ImageView fxBankiHnappur;
+    @FXML
+    private ImageView fxLeikmadurHnappur;
 
     /**
      * Frumstillir mynd í viðmóti við upphaf.
      */
     public void initialize() {
         fxSlokkvaHnappur.setImage(slokkvaHnappurMynd);
+        fxHjalpHnappur.setImage(hjalpHnappurMynd);
+        fxBankiHnappur.setImage(bankiHnappurMynd);
+        fxLeikmadurHnappur.setImage(leikmadurHnappurMynd);
     }
 
     public static final String VILTU_HAETTA = "Viltu hætta? ";

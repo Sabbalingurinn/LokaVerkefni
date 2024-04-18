@@ -2,12 +2,27 @@ package is.hi.lokaverkefni.vinnsla;
 
 public class Roulette {
 
+    private static Roulette instance;
+
     private int[] toluVedmal = {-1, -1, -1}; //Geymir töluleg veðmál notenda
     private String[] rauttSvartVedmal = new String[3]; //Geymir veðmál notenda á svart og rautt
     private int fjoldiBet = 0; //Fjoldi veðmála
     private final int[] RAUDARTOLUR = {32, 19, 21, 25, 34, 27, 36, 30, 23, 5, 16, 1, 14, 9, 18, 7, 12, 3};
     private final int[] SVARTARTOLUR = {15, 4, 2, 17, 6, 13, 11, 8, 10, 24, 33, 20, 31, 22, 29, 28, 35, 26};
     private int sidastaTala; //Síðasta tala sem kom upp í snúningi
+    private int mogulegurSigur; //Heildarvinnings eða tapsupphæð eftir snúning
+
+    /**
+     * Skilar eina rúlettu hjólinu
+     *
+     * @return Roulette.
+     */
+    public static Roulette getInstance(){
+        if(instance == null){
+            instance = new Roulette();
+        }
+        return instance;
+    }
 
     /**
      * Framkvæmir snúning á rúllettuhjólinu og reiknar út mögulegan vinning eða tap.
@@ -17,7 +32,7 @@ public class Roulette {
      */
     public int spin(int bet) {
 
-        int mogulegurSigur = 0;
+        this.mogulegurSigur = 0;
         this.sidastaTala = (int) (Math.random() * 38);
 
 
@@ -101,5 +116,14 @@ public class Roulette {
      */
     public void setFjoldiBet(int i){
         fjoldiBet = i;
+    }
+
+    /**
+     * Skilar mögulegan vinning eða tap.
+     *
+     * @return Heildarvinnings eða tapsupphæð.
+     */
+    public int getMogulegurSigur() {
+        return mogulegurSigur;
     }
 }
