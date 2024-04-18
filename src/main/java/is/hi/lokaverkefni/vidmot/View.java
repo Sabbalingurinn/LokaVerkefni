@@ -6,7 +6,9 @@ package is.hi.lokaverkefni.vidmot;
 public enum View {
     LOGIN("/is/hi/lokaverkefni/login-view.fxml"),
     ROULLETTE("/is/hi/lokaverkefni/Roulette-view.fxml"),
-    VANNST("/is/hi/lokaverkefni/vannst-view.fxml");
+    VANNST("/is/hi/lokaverkefni/vannst-view.fxml"),
+
+    MEDIA("/is/hi/lokaverkefni/rouletteMedia-view.fxml");
 
 
 

@@ -30,6 +30,7 @@ public class RoulletteController {
     private MenuController menuController;
     private LoginController loginController;
 
+
     /**
      * Meðhöndlar atburð þegar smellt er á hnapp.
      *
@@ -60,24 +61,24 @@ public class RoulletteController {
     }
 
     /**
-     * Skiptir um senu ef notandi vann.
+     * Spilar myndband af hjólinu snúast.
      */
-    public void athugaHvortVann() {
-        if (Roulette.getInstance().getMogulegurSigur() > 0){
-            ViewSwitcher.switchTo(View.VANNST);
-        }
+    public void spilaVideo() {
+        ViewSwitcher.switchTo(View.MEDIA);
+        RouletteMediaController mediaController = (RouletteMediaController) ViewSwitcher.getController(View.MEDIA);
+        mediaController.setupMediaPlayer();
     }
     /**
      * Framkvæmir "spin" aðgerð á roulette borðinu.
      */
     public void onRoulletteSpin(){
+        spilaVideo();
         if (athugaLoglegBetUpphaed()) {
             upphaed = upphaed + Roulette.getInstance().spin(Integer.parseInt(fxBettUpphaed.getText()));
             fxInnistaeda.setText("" + upphaed);
         } else {
             ofHaUpphaed();
         }
-        athugaHvortVann();
         endurStillaAllt();
         finnaToluSemDatt();
     }
@@ -122,6 +123,7 @@ public class RoulletteController {
      * Endurstilla allt.
      */
     public void endurStillaAllt(){
+
         fjoldiVedmal = 0;
         fxBord.setDisable(false);
         for(int i = 0; i < fxBord.getChildren().size(); i++){
@@ -181,6 +183,7 @@ public class RoulletteController {
         menuController.setNafn(loginController.getNafn());
         this.menuController = menuController;
     }
+
 
     /**
      * Uppfærir heildarupphæð notanda.

@@ -15,6 +15,10 @@ public class VannstController {
     @FXML
     private Label sigur;
 
+    /**
+     * Frumstillir og ræsir tímalínu sem breytir litum á sigurtexta á hálfs sekúndu fresti.
+     * Birtir einnig sigurupphæð notanda sem er fengin frá Roulette hlut.
+     */
     @FXML
     public void initialize() {
         Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(0.5), evt -> switchColor()));
@@ -23,10 +27,17 @@ public class VannstController {
         sigur.setText("Til hamingju, þú vannst " + Roulette.getInstance().getMogulegurSigur() + " kr");
     }
 
+    /**
+     * Þegar ýtt er á takkan Afram er skipt yfir á Roullette view
+     */
     @FXML
     public void onAfram() {
         ViewSwitcher.switchTo(View.ROULLETTE);
     }
+
+    /**
+     * Skptir í einhvern lit á 0,5 sek fresti
+     */
 
     private void switchColor() {
         Color color = new Color(Math.random(), Math.random(), Math.random(), 1);
