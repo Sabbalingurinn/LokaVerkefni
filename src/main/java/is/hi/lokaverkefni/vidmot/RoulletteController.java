@@ -29,6 +29,8 @@ public class RoulletteController {
     private MenuController menuController;
     private LoginController loginController;
 
+    private RouletteMediaController rouletteMediaController;
+
     public void onVedja(ActionEvent actionEvent) {
         Button reitur = (Button) actionEvent.getSource();
 
@@ -72,6 +74,7 @@ public class RoulletteController {
         fxFjoldiVedmal.setText("3/3");
 
         finnaToluSemDatt();
+
     }
 
     public void finnaToluSemDatt(){
