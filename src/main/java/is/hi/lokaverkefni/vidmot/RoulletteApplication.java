@@ -20,6 +20,8 @@ public class RoulletteApplication extends Application {
         // tengjum senuna við gluggann
         stage.setScene(scene);
 
+        stage.setResizable(false);
+
         // sýnum glugggann
         stage.show();
     }

@@ -9,29 +9,29 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #35654d;" stylesheets="@css/Roullette.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="is.hi.lokaverkefni.vidmot.RoulletteController" styleClass="backgroundRoulette">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #35654d;" styleClass="backgroundRoulette" stylesheets="@css/Roullette.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="is.hi.lokaverkefni.vidmot.RoulletteController">
    <children>
        <fx:include source="Menu-view.fxml" />
       <GridPane fx:id="fxBord" layoutX="276.0" layoutY="129.0" prefHeight="167.0" prefWidth="297.0">
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="32.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="67.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="48.0" minHeight="3.0" prefHeight="35.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="36.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
-        </rowConstraints>
+          <columnConstraints>
+              <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="35.0" prefWidth="35.0" />
+              <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="35.0" prefWidth="35.0" />
+              <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="35.0" prefWidth="35.0" />
+              <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="35.0" prefWidth="35.0" />
+              <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="35.0" prefWidth="35.0" />
+              <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="35.0" prefWidth="35.0" />
+              <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="35.0" prefWidth="35.0" />
+              <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="35.0" prefWidth="35.0" />
+          </columnConstraints>
+          <rowConstraints>
+              <RowConstraints maxHeight="40.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
+              <RowConstraints maxHeight="40.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
+              <RowConstraints maxHeight="40.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
+              <RowConstraints maxHeight="40.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
+              <RowConstraints maxHeight="40.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
+          </rowConstraints>
          <children>
-            <Button contentDisplay="CENTER" maxHeight="79.0" maxWidth="95.0" mnemonicParsing="false" onAction="#onVedja" prefHeight="25.0" prefWidth="95.0" text="1" textFill="RED" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <Button contentDisplay="CENTER" maxHeight="79.0" maxWidth="95.0" mnemonicParsing="false" onAction="#onVedja" prefHeight="33.0" prefWidth="37.0" text="1" textFill="RED" GridPane.columnIndex="0" GridPane.rowIndex="0" />
             <Button mnemonicParsing="false" onAction="#onVedja" prefHeight="79.0" prefWidth="148.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="0" />
             <Button mnemonicParsing="false" onAction="#onVedja" prefHeight="102.0" prefWidth="72.0" text="3" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="0" />
             <Button mnemonicParsing="false" onAction="#onVedja" prefHeight="146.0" prefWidth="75.0" text="4" GridPane.columnIndex="3" GridPane.rowIndex="0" />
@@ -73,16 +73,18 @@
             <Button layoutX="269.0" layoutY="151.0" mnemonicParsing="false" onAction="#onVedja" prefHeight="82.0" prefWidth="46.0" style="-fx-background-color: #06a737;" text="00" GridPane.columnIndex="5" GridPane.rowIndex="4" />
          </children>
       </GridPane>
-      <Button layoutX="48.0" layoutY="123.0" mnemonicParsing="false" onAction="#onRoulletteSpin" prefHeight="175.0" prefWidth="175.0" style="-fx-background-radius: 100; -fx-background-color: #35654d;" styleClass="spinRoulletteMynd" textOverrun="CLIP" />
-      <Text layoutX="57.0" layoutY="347.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 20;" text="BALANCE:" wrappingWidth="128.21630859375" />
-      <Text layoutX="332.0" layoutY="347.0" strokeType="OUTSIDE" strokeWidth="0.0" text="YOUR BET:" />
-      <Label fx:id="fxInnistaeda" layoutX="121.0" layoutY="334.0" />
-      <TextField fx:id="fxBettUpphaed" layoutX="401.0" layoutY="330.0" />
+      <Button fx:id="fxSpin" layoutX="48.0" layoutY="123.0" mnemonicParsing="false" onAction="#onRoulletteSpin" prefHeight="175.0" prefWidth="175.0" style="-fx-background-radius: 100; -fx-background-color: #35654d;" styleClass="spinRoulletteMynd" textOverrun="CLIP" disable="true" />
+      <Text layoutX="57.0" layoutY="347.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 200;" text="BALANCE:" wrappingWidth="128.21630859375" />
+      <Text layoutX="277.0" layoutY="347.0" strokeType="OUTSIDE" strokeWidth="0.0" text="YOUR BET:" />
+      <Label fx:id="fxInnistaeda" layoutX="121.0" layoutY="334.0" textFill="black" />
+      <TextField fx:id="fxBettUpphaed" layoutX="346.0" layoutY="330.0" prefHeight="26.0" prefWidth="70.0" />
       <Text layoutX="72.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ýttu á hjólið til að fá tölu" />
       <Text layoutX="277.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ýttu á þá reiti sem þú vilt veðja á. Þú átt " />
-      <Label fx:id="fxFjoldiVedmal" layoutX="489.0" layoutY="107.0" text="3/3" />
+      <Label fx:id="fxFjoldiVedmal" layoutX="489.0" layoutY="107.0" text="3/3" textFill="black" />
       <Text layoutX="509.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" veðmál eftir" />
-      <Button disable="true" layoutX="474.0" layoutY="40.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" fx:id="fxTalanSemDatt" />
+      <Button fx:id="fxTalanSemDatt" disable="true" layoutX="474.0" layoutY="40.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" />
       <Text layoutX="383.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Talan sem datt:" />
+      <Button layoutX="424.0" layoutY="329.0" mnemonicParsing="false" onAction="#onBetILagi" prefWidth="70.0" text="Í lagi" />
+      <Button layoutX="502.0" layoutY="330.0" mnemonicParsing="false" text="Hætta við" onAction="#onBetHaettaVid" />
    </children>
 </AnchorPane>
