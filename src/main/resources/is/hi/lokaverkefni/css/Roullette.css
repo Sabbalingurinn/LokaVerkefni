@@ -28,3 +28,9 @@
    -fx-background-size: cover;
 }
 
+.youWon {
+-fx-background-image:
+   url("media/youWon.png");
+   -fx-background-size: cover;
+}
+

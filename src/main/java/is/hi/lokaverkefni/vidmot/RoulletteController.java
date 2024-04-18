@@ -13,7 +13,6 @@ public class RoulletteController {
     private int upphaed;
     private String nafn;
     private int fjoldiVedmal = 0;
-    private Roulette roulette = new Roulette();
 
     @FXML
     private Label fxInnistaeda;
@@ -40,13 +39,13 @@ public class RoulletteController {
         Button reitur = (Button) actionEvent.getSource();
 
         if(reitur.getText().equals("R")){
-            roulette.baetaVidSvartRauttBet("R");
+            Roulette.getInstance().baetaVidSvartRauttBet("R");
         } else if(reitur.getText().equals("B")){
-            roulette.baetaVidSvartRauttBet("B");
+            Roulette.getInstance().baetaVidSvartRauttBet("B");
         } else if(reitur.getText().equals("00")){
-            roulette.baetaVidToluVedmal(37);
+            Roulette.getInstance().baetaVidToluVedmal(37);
         } else {
-            roulette.baetaVidToluVedmal(Integer.parseInt(reitur.getText()));
+            Roulette.getInstance().baetaVidToluVedmal(Integer.parseInt(reitur.getText()));
         }
         reitur.setDisable(true);
         reitur.getStyleClass().add("casinoChip");
@@ -59,16 +58,26 @@ public class RoulletteController {
         fxFjoldiVedmal.setText((3-fjoldiVedmal) + "/3");
 
     }
+
+    /**
+     * Skiptir um senu ef notandi vann.
+     */
+    public void athugaHvortVann() {
+        if (Roulette.getInstance().getMogulegurSigur() > 0){
+            ViewSwitcher.switchTo(View.VANNST);
+        }
+    }
     /**
      * Framkvæmir "spin" aðgerð á roulette borðinu.
      */
     public void onRoulletteSpin(){
         if (athugaLoglegBetUpphaed()) {
-            upphaed = upphaed + roulette.spin(Integer.parseInt(fxBettUpphaed.getText()));
+            upphaed = upphaed + Roulette.getInstance().spin(Integer.parseInt(fxBettUpphaed.getText()));
             fxInnistaeda.setText("" + upphaed);
         } else {
             ofHaUpphaed();
         }
+        athugaHvortVann();
         endurStillaAllt();
         finnaToluSemDatt();
     }
@@ -87,6 +96,15 @@ public class RoulletteController {
      */
     public void ofHaUpphaed(){
         Alert alert = new Alert(Alert.AlertType.WARNING, "Vinsamlegast skrifaðu inn lægri upphæð.");
+        Optional<ButtonType> optional = alert.showAndWait();
+        if (optional.isPresent() && optional.get().equals(ButtonType.OK)) { }
+    }
+
+    /**
+     * Byrtir Alert ef ekkert bet er valið.
+     */
+    public void ekkertBet(){
+        Alert alert = new Alert(Alert.AlertType.WARNING, "Vinsamlegast veldu reit til að veðja á.");
         Optional<ButtonType> optional = alert.showAndWait();
         if (optional.isPresent() && optional.get().equals(ButtonType.OK)) { }
     }
@@ -114,15 +132,16 @@ public class RoulletteController {
         fxFjoldiVedmal.setText("3/3");
         fxBettUpphaed.setText("");
         fxSpin.setDisable(true);
+        fxBord.setDisable(false);
         fxBettUpphaed.setDisable(false);
-        roulette.setFjoldiBet(0);
+        Roulette.getInstance().setFjoldiBet(0);
     }
 
     /**
      * Finnur út og uppfærir hver talan var sem kom út úr síðasta `onRoulletteSpin`.
      */
     public void finnaToluSemDatt(){
-        int talaSemDatt = roulette.getSidastaTala();
+        int talaSemDatt = Roulette.getInstance().getSidastaTala();
 
         for(int i = 0; i < fxBord.getChildren().size(); i++){
             Button reitur = (Button) fxBord.getChildren().get(i);
@@ -197,11 +216,15 @@ public class RoulletteController {
     @FXML
     public void onBetILagi(ActionEvent actionEvent) {
         try {
-            if (athugaLoglegBetUpphaed()) {
+            if (fjoldiVedmal == 0) {
+                ekkertBet();
+            } else if (athugaLoglegBetUpphaed()) {
                 fxSpin.setDisable(false);
+                fxBord.setDisable(true);
                 fxBettUpphaed.setDisable(true);
             } else {
                 ofHaUpphaed();
+
             }
         } catch (Exception e) {
             ologlegUpphaed();

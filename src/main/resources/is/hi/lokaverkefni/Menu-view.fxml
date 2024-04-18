@@ -5,18 +5,27 @@
 
 <MenuBar xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="is.hi.lokaverkefni.vidmot.MenuController">
     <menus>
-        <Menu mnemonicParsing="false" text="Leikmaður">
+        <Menu mnemonicParsing="false" >
+            <graphic>
+                <ImageView fx:id="fxLeikmadurHnappur" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" />
+            </graphic>
             <items>
                 <MenuItem mnemonicParsing="false" onAction="#onProfill" text="Prófíll" />
             </items>
         </Menu>
-        <Menu mnemonicParsing="false" text="Banki">
+        <Menu mnemonicParsing="false" >
+            <graphic>
+                <ImageView fx:id="fxBankiHnappur" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" />
+            </graphic>
             <items>
                 <MenuItem mnemonicParsing="false" onAction="#onBanki" text="Leggja inn pening" />
                 <MenuItem mnemonicParsing="false" onAction="#onBankiUt" text="Taka út pening" />
             </items>
         </Menu>
-        <Menu mnemonicParsing="false" onAction="#onInfo" text="Hjálp">
+        <Menu mnemonicParsing="false" onAction="#onInfo">
+            <graphic>
+            <ImageView fx:id="fxHjalpHnappur" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" />
+            </graphic>
          <items>
             <MenuItem mnemonicParsing="false" text="Leikreglur" />
          </items></Menu>
@@ -25,7 +34,7 @@
             <ImageView fx:id="fxSlokkvaHnappur" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" />
          </graphic>
          <items>
-            <MenuItem mnemonicParsing="false" text="Hætta" onAction="#onHaetta" />
+            <MenuItem mnemonicParsing="false" onAction="#onHaetta" text="Hætta" />
          </items>
         </Menu>
     </menus>
